@@ -12,7 +12,6 @@ module.exports = {
   output: {
     uniqueName: "remote",
     publicPath: "http://localhost:4201/",
-    // scriptType: 'text/javascript'
   },
   optimization: {
     runtimeChunk: false
@@ -27,19 +26,14 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-        library: { type: "module" },
+        library: { type: "var", name: 'remote' },
 
-        // For remotes (please adjust)
         name: "remote",
         filename: "remoteEntry.js",
         exposes: {
-            './Module': './src/app/container/container.module.ts'
+            './Module': './src/app/container/container.module.ts',
+            './ListComponent': './src/app/list/list.component.ts',
         },
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "http://localhost:3000/remoteEntry.js",
-
-        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
