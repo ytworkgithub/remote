@@ -1,5 +1,10 @@
 remote
 
+<app-list
+  [input]="'text from remote'"
+  (buttonClick)="handleButtonClick($event)"
+></app-list>
+
 <a routerLink="/header">navigate to home</a>
 
 <router-outlet></router-outlet>

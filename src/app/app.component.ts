@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'remote';
 
   constructor() {}
+
+  handleButtonClick(value: string) {
+    console.log(value);
+  }
 }
