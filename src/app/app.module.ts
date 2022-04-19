@@ -10,7 +10,12 @@ import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [AppComponent, ListComponent],
-  imports: [BrowserModule, AppRoutingModule, ContainerRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ContainerRoutingModule,
+    ContainerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
