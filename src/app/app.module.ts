@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { ContainerModule } from './container/container.module';
+import * as Utils from './utils/utils';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

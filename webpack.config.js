@@ -33,6 +33,7 @@ module.exports = {
         exposes: {
             './Module': './src/app/container/container.module.ts',
             './ListComponent': './src/app/list/list.component.ts',
+            './Utils': './src/app/utils/utils.ts'
         },
 
         shared: share({
